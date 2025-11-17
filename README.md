@@ -7,7 +7,7 @@ It replaces the old GitHub Wiki and provides a clean, searchable, and easy-to-ma
 
 ---
 
-## 📘 About This Site
+## About This Site
 
 This docs site includes:
 
@@ -25,7 +25,7 @@ src/content/docs/
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 src/
@@ -42,7 +42,7 @@ This organization helps contributors quickly find where a new page should go.
 
 ---
 
-## 🧞 Commands
+## Commands
 
 All commands run from the project root:
 
@@ -57,7 +57,7 @@ All commands run from the project root:
 
 ---
 
-## 🚀 Deployment
+## Deployment
 
 This site is deployed automatically whenever changes are pushed to the `main` branch.  
 Your hosting provider (Vercel, GitHub Pages, or Netlify) will:
@@ -70,7 +70,7 @@ If needed, add your specific deployment target here.
 
 ---
 
-## ✏️ Contributing
+## Contributing
 
 To add or update documentation:
 
@@ -90,15 +90,15 @@ To add or update documentation:
 
 ---
 
-## 👀 Want to Learn More?
+## Want to Learn More?
 
-- 📚 [Starlight Documentation](https://starlight.astro.build/)
-- 🚀 [Astro Documentation](https://docs.astro.build)
-- 💬 [Astro Discord](https://astro.build/chat)
+- [Starlight Documentation](https://starlight.astro.build/)
+- [Astro Documentation](https://docs.astro.build)
+- [Astro Discord](https://astro.build/chat)
 
 ---
 
-## 🧩 Related Repositories
+## Related Repositories
 
 - **Main Minesweeper Game:** https://github.com/v-gajjar/Minesweeper  
 - **Docs Site (this repo):** _you are here_
