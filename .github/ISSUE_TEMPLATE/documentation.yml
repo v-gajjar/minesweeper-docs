@@ -1,64 +1,51 @@
-name: Documentation
-description: Request documentation updates or additions.
-labels: [documentation]
+---
+name: Documentation Update
+about: Submit changes or additions to the documentation site
+title: ''
+labels: ['documentation']
+assignees: []
+---
 
-body:
-  - type: markdown
-    attributes:
-      value: |
-        ## Description
-        Indicate which documentation needs work.
+## Description
 
-  - type: textarea
-    id: description
-    attributes:
-      label: Description
-      placeholder: Link or path and what needs to be updated or added.
-    validations:
-      required: true
+Briefly explain what was updated, added, removed, or reorganized in the documentation and why it was needed.
 
-  - type: markdown
-    attributes:
-      value: |
-        ## Proposed Change
-        Describe the updates or additions you suggest.
+## Type of Change
 
-  - type: textarea
-    id: proposal
-    attributes:
-      label: Proposed Change
-      placeholder: The section or wording you would add or change.
+- [ ] New page or major addition  
+- [ ] Update to an existing page  
+- [ ] Structural or navigation changes  
+- [ ] Cleanup (grammar, formatting, rewriting)  
+- [ ] Fix for inaccurate or outdated information  
+- [ ] Other (describe below)
 
-  - type: markdown
-    attributes:
-      value: |
-        ## Screenshots
-        Optional images for context.
+## Validation
 
-  - type: textarea
-    id: screenshots
-    attributes:
-      label: Screenshots
-      placeholder: Upload or drag images here.
+- [ ] Viewed changes in local dev server  
+- [ ] Verified links work properly  
+- [ ] Checked formatting, headings, and code blocks  
+- [ ] Confirmed screenshots or diagrams render correctly  
 
-  - type: markdown
-    attributes:
-      value: |
-        ## Additional Context
-        Any related issues, PRs, or external references.
+## Checklist
 
-  - type: textarea
-    id: context
-    attributes:
-      label: Additional Context
-      placeholder: Related issues, PRs, or external links.
+- [ ] Content follows project style and terminology  
+- [ ] No spelling or grammar issues  
+- [ ] No broken links  
+- [ ] Sidebar/navigation updated if necessary  
+- [ ] Frontmatter is correct (title, description, tags)  
+- [ ] Related pages updated if affected  
 
-  - type: checkboxes
-    id: checklist
-    attributes:
-      label: Checklist
-      options:
-        - label: I searched existing issues or PRs for related docs work
-          required: true
-        - label: This issue includes enough detail to act on
-          required: true
+## How to Review
+
+List specific pages changed and any steps needed to verify:
+
+- Page(s) updated:  
+- What reviewers should look for:  
+
+## Screenshots or Previews (optional)
+
+Attach screenshots, GIFs, or preview URLs showing the updated documentation.
+
+## Additional Notes
+
+Add any context or follow-up tasks for reviewers.
