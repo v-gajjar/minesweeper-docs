@@ -1,5 +1,12 @@
+---
+title: Test Suite
+description: Overview of the automated test suite for Minesweeper.
+---
+
+# Test Suite
+
 The Minesweeper project includes an automated test suite to verify game logic, UI behavior, and component reliability.  
-All tests are written with **[Vitest](https://vitest.dev/)** — a fast, Vite-native testing framework designed for modern React + TypeScript projects.
+All tests are written with **Vitest** — a fast, Vite-native testing framework designed for modern React + TypeScript projects.
 
 ---
 
@@ -11,8 +18,8 @@ To execute all tests locally, run:
 npm run test
 ```
 
-This command runs Vitest in non-interactive (CI) mode and outputs results directly to the console.
-You’ll see a summary of passed, failed, and skipped tests.
+This command runs Vitest in non-interactive (CI) mode and outputs results directly to the console.  
+You will see a summary of passed, failed, and skipped tests.
 
 ---
 
@@ -24,8 +31,8 @@ To view coverage information:
 npm run test -- --coverage
 ```
 
-This generates a detailed report showing which files, lines, and branches are tested.
-Coverage results are displayed in the terminal and saved to the /coverage directory.
+This generates a detailed report showing which files, lines, and branches are tested.  
+Coverage results are displayed in the terminal and saved to the `/coverage` directory.
 
 ---
 
@@ -33,7 +40,7 @@ Coverage results are displayed in the terminal and saved to the /coverage direct
 
 All test files follow this convention:
 
-```plaintest
+```plaintext
 src/
  ├── components/
  │    └── GameBoard/
@@ -42,16 +49,16 @@ src/
  └── ...
 ```
 
-### Guidelines:
+### Guidelines
 
-- Each component or module should have a matching *.test.tsx or *.test.ts file.
+- Each component or module should have a matching `.test.tsx` or `.test.ts` file.
 - Use React Testing Library for component rendering and user interactions.
-- Use Vitest’s describe, it, and expect syntax for assertions.
+- Use Vitest’s `describe`, `it`, and `expect` syntax for assertions.
 - Keep tests focused on behavior, not implementation details.
 
 Example:
 
-```bash
+```tsx
 import { render, screen } from '@testing-library/react';
 import { GameBoard } from '@/components/GameBoard/GameBoard';
 
@@ -68,12 +75,12 @@ describe('GameBoard', () => {
 
 ## Common Commands
 
-| Task | Command |
-|------|----------|
-| Run all tests | `npm run test` |
-| Run a single test file | `npx vitest run src/components/GameBoard/GameBoard.test.tsx` |
-| Run tests in watch mode | `npx vitest` |
-| Show coverage report | `npm run test -- --coverage` |
+| Task                     | Command                                                            |
+|-------------------------|--------------------------------------------------------------------|
+| Run all tests           | `npm run test`                                                     |
+| Run a single test file  | `npx vitest run src/components/GameBoard/GameBoard.test.tsx`       |
+| Run tests in watch mode | `npx vitest`                                                       |
+| Show coverage report    | `npm run test -- --coverage`                                       |
 
 ---
 
@@ -82,20 +89,20 @@ describe('GameBoard', () => {
 - Test user behavior rather than implementation details.
 - Keep tests isolated: each test should run independently.
 - Use descriptive test names: they should read like short sentences.
-- Mock dependencies (like timers or random functions) where deterministic results are required.
+- Mock dependencies (timers, random functions) where deterministic results are needed.
 - Run tests before every pull request to catch regressions early.
 
 ---
 
 ## Continuous Integration
 
-All tests are automatically executed in the project’s GitHub Actions workflow to ensure every pull request maintains stability.
+All tests are automatically executed in the project’s GitHub Actions workflow to ensure every pull request maintains stability.  
 Contributors should confirm all tests pass locally before submitting new code.
 
 ---
 
-Additional Resources
+## Additional Resources
 
-- [Vitest Documentation](https://vitest.dev/guide/)
-- [Testing Library Docs](https://testing-library.com/docs/react-testing-library/intro)
-- [Contributing Guide](https://github.com/v-gajjar/Minesweeper/blob/develop/CONTRIBUTING.md)
+- Vitest Documentation: https://vitest.dev/guide/
+- Testing Library Documentation: https://testing-library.com/docs/react-testing-library/intro
+- Contributing Guide: https://github.com/v-gajjar/Minesweeper/blob/develop/CONTRIBUTING.md

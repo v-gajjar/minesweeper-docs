@@ -1,97 +1,114 @@
-In the Minesweeper project, labels help us keep the board organized and prevent duplicate or misplaced issues.
-Each label serves a clear purpose — think of them as flags marking what kind of work or discussion an issue represents.
+---
+title: Issue Labels
+description: Explanation of each label used in the Minesweeper project and how they should be applied.
+---
+
+In the Minesweeper project, labels help maintain an organized issue board and reduce duplicates or misplaced reports.  
+Each label represents a specific type of work or discussion.  
 You can click any label name below to view all open issues using that label.
 
 ---
 
-[bug](https://github.com/v-gajjar/Minesweeper/issues?q=state%3Aopen+label%3Abug)
+### bug  
+[View issues](https://github.com/v-gajjar/Minesweeper/issues?q=state%3Aopen+label%3Abug)
 
-Something isn’t working.
-Use this when you’ve uncovered a reproducible error, unexpected behavior, or broken logic in the game.
-Example: Clicking a safe cell ends the game → bug + priority:high
-
----
-
-[documentation](https://github.com/v-gajjar/Minesweeper/issues?q=state%3Aopen+label%3Adocumentation)
-
-For documentation updates or improvements.
-Apply this when the README, wiki, or in-code documentation needs clarification, corrections, or expansion.
+Something is not working as intended.  
+Use this when you uncover a reproducible error, unexpected behavior, or broken logic in the game.  
+Example: Clicking a safe cell ends the game → `bug` + `priority:high`.
 
 ---
 
-[duplicate](https://github.com/v-gajjar/Minesweeper/issues?q=state%3Aopen+label%3Aduplicate)
+### documentation  
+[View issues](https://github.com/v-gajjar/Minesweeper/issues?q=state%3Aopen+label%3Adocumentation)
 
-This issue already exists.
-Used to close or merge repeated reports. Link to the original issue for reference.
-
----
-
-[enhancement](https://github.com/v-gajjar/Minesweeper/issues?q=state%3Aopen+label%3Aenhancement)
-
-Feature requests or improvements.
-Use this for new ideas, gameplay features, or quality-of-life enhancements that expand or refine the experience.
+For updates or improvements to written materials.  
+Use this when the README, wiki, or code comments need clarification, correction, or expansion.
 
 ---
 
-[good first issue](https://github.com/v-gajjar/Minesweeper/issues?q=state%3Aopen+label%3A%22good+first+issue%22)
+### duplicate  
+[View issues](https://github.com/v-gajjar/Minesweeper/issues?q=state%3Aopen+label%3Aduplicate)
 
-Beginner-friendly tasks.
-Smaller, self-contained issues ideal for first-time contributors who want to make a safe and meaningful contribution.
-
----
-
-[help wanted](https://github.com/v-gajjar/Minesweeper/issues?q=state%3Aopen+label%3A%22help+wanted%22)
-
-Extra attention is needed.
-Mark this when additional contributors, feedback, or troubleshooting help would move the issue forward.
+Marks an issue that has already been reported.  
+Used when closing or merging repeated reports. Link to the original issue when possible.
 
 ---
 
-[invalid](https://github.com/v-gajjar/Minesweeper/issues?q=state%3Aopen+label%3Ainvalid)
+### enhancement  
+[View issues](https://github.com/v-gajjar/Minesweeper/issues?q=state%3Aopen+label%3Aenhancement)
 
-Not a valid or reproducible issue.
-Used when the report doesn’t apply, lacks context, or can’t be verified.
-
----
-
-[priority:high](https://github.com/v-gajjar/Minesweeper/issues?q=state%3Aopen+label%3A%22priority%3A+high%22)
-
-Critical issue or blocker.
-These are top-priority items — problems that break gameplay, block builds, or impact major functionality.
+Feature requests or improvements.  
+Use this for new ideas, gameplay features, or quality-of-life refinements.
 
 ---
 
-[priority:medium](https://github.com/v-gajjar/Minesweeper/issues?q=state%3Aopen+label%3A%22priority%3A+medium%22)
+### good first issue  
+[View issues](https://github.com/v-gajjar/Minesweeper/issues?q=state%3Aopen+label%3A%22good+first+issue%22)
 
-Important but not urgent.
-Applies to work that improves stability or adds valuable functionality but isn’t blocking progress.
-
----
-
-[priority:low](https://github.com/v-gajjar/Minesweeper/issues?q=state%3Aopen+label%3A%22priority%3A+low%22)
-
-Minor or cosmetic issue.
-Used for optional improvements or long-term ideas that can be revisited later.
+Beginner-friendly tasks.  
+Small, self-contained issues ideal for new contributors.
 
 ---
 
-[question](https://github.com/v-gajjar/Minesweeper/issues?q=state%3Aopen+label%3Aquestion)
+### help wanted  
+[View issues](https://github.com/v-gajjar/Minesweeper/issues?q=state%3Aopen+label%3A%22help+wanted%22)
 
-Information or clarification needed.
-For issues that are primarily questions or requests for guidance rather than actionable bugs or features.
-
----
-
-[wontfix](https://github.com/v-gajjar/Minesweeper/issues?q=state%3Aopen+label%3Awontfix)
-
-Will not be addressed.
-Used when the team decides not to take action on the issue — usually because it’s out of scope or low impact.
+Additional attention is needed.  
+Apply this when extra contributors, troubleshooting, or technical insight would help move the issue forward.
 
 ---
 
-Labeling Guidelines
+### invalid  
+[View issues](https://github.com/v-gajjar/Minesweeper/issues?q=state%3Aopen+label%3Ainvalid)
 
-- Multiple labels can be combined (for example, enhancement + priority:medium).
-- Maintainers review and confirm labels during triage.
-- Contributors are encouraged to apply the most relevant label when creating an issue.
-- The project’s [Kanban board](https://github.com/users/v-gajjar/projects/2) uses these labels to organize and prioritize work efficiently.
+Marks an issue that is not valid or cannot be reproduced.  
+Used when the report does not apply, lacks detail, or cannot be verified.
+
+---
+
+### priority:high  
+[View issues](https://github.com/v-gajjar/Minesweeper/issues?q=state%3Aopen+label%3A%22priority%3A+high%22)
+
+Critical issues or blockers.  
+These break gameplay, block builds, or impact major functionality.
+
+---
+
+### priority:medium  
+[View issues](https://github.com/v-gajjar/Minesweeper/issues?q=state%3Aopen+label%3A%22priority%3A+medium%22)
+
+Important but not urgent.  
+Work that improves stability or adds valuable functionality without blocking progress.
+
+---
+
+### priority:low  
+[View issues](https://github.com/v-gajjar/Minesweeper/issues?q=state%3Aopen+label%3A%22priority%3A+low%22)
+
+Minor or cosmetic issues.  
+Optional improvements or long-term ideas that can be addressed later.
+
+---
+
+### question  
+[View issues](https://github.com/v-gajjar/Minesweeper/issues?q=state%3Aopen+label%3Aquestion)
+
+Requests for clarification or information.  
+Use this when an issue is primarily a question rather than an actionable task.
+
+---
+
+### wontfix  
+[View issues](https://github.com/v-gajjar/Minesweeper/issues?q=state%3Aopen+label%3Awontfix)
+
+Indicates that the team does not plan to address the issue.  
+Used when a report is out of scope, low-impact, or intentionally not being pursued.
+
+---
+
+## Labeling Guidelines
+
+- Multiple labels can be combined (for example, `enhancement` + `priority:medium`).
+- Maintainers review and confirm labels during issue triage.
+- Contributors are encouraged to select the most relevant label when creating an issue.
+- The project’s Kanban board uses these labels to prioritize and organize work.

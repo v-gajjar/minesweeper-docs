@@ -1,79 +1,68 @@
+---
+title: File Map
+description: A structured overview of the Minesweeper project’s directory layout and what each major folder contains.
+---
+
+# File Map
+
+This page provides a clear, structured look at the Minesweeper repository.  
+Use it to understand where core logic lives, how components are organized, and where to add new features.
+
+---
+
+## Project Structure
+
 ```plaintext
 .
 ├── .github
-│   ├── ISSUE_TEMPLATE
-│   │   ├── bug.yml
-│   │   ├── config.yml
-│   │   ├── documentation.yml
-│   │   ├── enhancement_refactor.yml
-│   │   ├── feature_request.yml
-│   │   └── question_discussion.yml
+│   ├── ISSUE_TEMPLATE/         # GitHub issue templates for bugs, docs, features, etc.
 │   ├── pull_request_template.md
-│   └── workflows
-│       └── build-checks.yaml
+│   └── workflows/
+│       └── build-checks.yaml   # Automated linting and type checks
 ├── .gitignore
 ├── .prettierignore
-├── .prettierrc.yml
+├── .prettierrc.yml             # Prettier configuration
 ├── .stylelintignore
-├── .stylelintrc.json
+├── .stylelintrc.json           # Stylelint rules for CSS
 ├── CODE_OF_CONDUCT.md
 ├── CONTRIBUTING.md
 ├── CONTRIBUTORS.md
-├── Dockerfile
-├── eslint.config.js
-├── globals.d.ts
-├── index.html
+├── Dockerfile                  # Optional container configuration for local or CI use
+├── eslint.config.js            # ESLint configuration
+├── globals.d.ts                # Global TypeScript types (if needed)
+├── index.html                  # Vite root HTML
 ├── LICENSE
 ├── package-lock.json
 ├── package.json
 ├── README.md
-├── src
+├── src/
 │   ├── App.css
-│   ├── App.tsx
-│   ├── assets
-│   │   ├── Minesweeper-16-06-2025.gif
-│   │   └── ui-flow.png
-│   ├── components
-│   │   └── feature
-│   │       ├── DifficultySelect
-│   │       │   ├── DifficultySelect.interfaces.ts
-│   │       │   └── DifficultySelect.tsx
-│   │       ├── GameBoard
-│   │       │   ├── Cell
-│   │       │   │   ├── Cell.interfaces.ts
-│   │       │   │   ├── Cell.module.css
-│   │       │   │   └── Cell.tsx
-│   │       │   ├── GameBoard.interfaces.ts
-│   │       │   ├── GameBoard.module.css
-│   │       │   └── GameBoard.tsx
-│   │       ├── RemainingFlagsCounter
-│   │       │   ├── RemainingFlagsCounter.interface.ts
-│   │       │   ├── RemainingFlagsCounter.module.css
-│   │       │   └── RemainingFlagsCounter.tsx
-│   │       └── ResultModal
-│   │           ├── ResultModal.interface.ts
-│   │           ├── ResultModal.module.css
-│   │           └── ResultModal.tsx
-│   ├── config
-│   │   └── gameDifficultyLevelSettings.ts
+│   ├── App.tsx                 # Root application component
+│   ├── assets/                 # Images, GIFs, and static media
+│   ├── components/
+│   │   └── feature/            # Grouped feature-specific React components
+│   │       ├── DifficultySelect/
+│   │       ├── GameBoard/
+│   │       ├── RemainingFlagsCounter/
+│   │       └── ResultModal/
+│   ├── config/
+│   │   └── gameDifficultyLevelSettings.ts  # Bomb count / grid size per difficulty
 │   ├── index.css
-│   ├── main.tsx
-│   ├── minesweeperUtils.ts
-│   ├── types.ts
-│   ├── utils
+│   ├── main.tsx                # React/Vite entry point
+│   ├── minesweeperUtils.ts     # Core game state + reducer utilities
+│   ├── types.ts                # Shared TypeScript types
+│   ├── utils/                  # More granular helpers for board + cell logic
 │   │   ├── boardUtils.ts
 │   │   ├── cellUtils.ts
-│   │   ├── index.ts
-│   │   └── mineUtils.ts
+│   │   ├── mineUtils.ts
+│   │   └── index.ts
 │   └── vite-env.d.ts
-├── tests
-│   └── unit
+├── tests/
+│   └── unit/                   # Unit tests (Vitest)
 │       ├── App.test.jsx
 │       ├── Board.test.jsx
 │       └── GameBoard.test.jsx
 ├── tsconfig.app.json
 ├── tsconfig.json
 ├── tsconfig.node.json
-└── vite.config.ts
-
-```
+└── vite.config.ts              # Vite configuration for build + dev

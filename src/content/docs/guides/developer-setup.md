@@ -1,3 +1,8 @@
+---
+title: Developer Setup
+description: Get your environment ready to run and contribute to the Minesweeper project.
+---
+
 # Developer Setup
 
 Get your environment ready to run and contribute to the project.

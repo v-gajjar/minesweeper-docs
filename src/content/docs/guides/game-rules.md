@@ -1,3 +1,8 @@
+---
+title: How to Play
+description: Learn the rules, controls, and core objectives of Minesweeper.
+---
+
 ### How to Play
 
 Minesweeper begins with all cells hidden. Once you make your **first move**, a set number of mines are randomly placed on the board — but never on that first cell.

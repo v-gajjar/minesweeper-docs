@@ -1,6 +1,6 @@
-The Minesweeper project is built with a modular architecture designed for clarity, testability, and scalability.  
-This page provides an overview of the core structure, component relationships, and data flow across the application.
-
+---
+title: System Overview
+description: High-level overview of the Minesweeper architecture and how the major parts of the system fit together.
 ---
 
 ## System Overview

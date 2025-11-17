@@ -1,3 +1,8 @@
+---
+title: How to Play
+description: Learn the rules of Minesweeper and how to play the game effectively.
+---
+
 # Coding Standards
 
 Consistent coding standards ensure maintainability, readability, and collaboration across the team.
