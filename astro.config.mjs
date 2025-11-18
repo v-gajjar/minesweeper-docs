@@ -4,18 +4,22 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://vinayscode.github.io/',
-	base: '/minesweeper-docs',
 	integrations: [
 		starlight({
 			title: 'Minesweeper Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/v-gajjar/Minesweeper' }],
+			social: [
+				{
+					icon: 'github',
+					label: 'GitHub',
+					href: 'https://github.com/v-gajjar/Minesweeper',
+				},
+			],
 			sidebar: [
 				{
 					label: 'Guides',
 					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
+						// Add real guide entries here later, e.g.:
+						// { label: 'Getting Started', slug: 'guides/getting-started' },
 					],
 				},
 				{
