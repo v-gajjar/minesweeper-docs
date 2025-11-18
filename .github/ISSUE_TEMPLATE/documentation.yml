@@ -1,0 +1,51 @@
+---
+name: Documentation Update
+about: Submit changes or additions to the documentation site
+title: Documentation Update
+labels: ['documentation']
+assignees: []
+---
+
+## Description
+
+Briefly explain what was updated, added, removed, or reorganized in the documentation and why it was needed.
+
+## Type of Change
+
+- [ ] New page or major addition  
+- [ ] Update to an existing page  
+- [ ] Structural or navigation changes  
+- [ ] Cleanup (grammar, formatting, rewriting)  
+- [ ] Fix for inaccurate or outdated information  
+- [ ] Other (describe below)
+
+## Validation
+
+- [ ] Viewed changes in local dev server  
+- [ ] Verified links work properly  
+- [ ] Checked formatting, headings, and code blocks  
+- [ ] Confirmed screenshots or diagrams render correctly  
+
+## Checklist
+
+- [ ] Content follows project style and terminology  
+- [ ] No spelling or grammar issues  
+- [ ] No broken links  
+- [ ] Sidebar/navigation updated if necessary  
+- [ ] Frontmatter is correct (title, description, tags)  
+- [ ] Related pages updated if affected  
+
+## How to Review
+
+List specific pages changed and any steps needed to verify:
+
+- Page(s) updated:  
+- What reviewers should look for:  
+
+## Screenshots or Previews (optional)
+
+Attach screenshots, GIFs, or preview URLs showing the updated documentation.
+
+## Additional Notes
+
+Add any context or follow-up tasks for reviewers.
