@@ -29,7 +29,7 @@ export default defineConfig({
     }),
   ],
 
-  // ⬇ Optional – only if you want to hide that UNUSED_EXTERNAL_IMPORT warning
+  // Optional – only if you want to hide that UNUSED_EXTERNAL_IMPORT warning
   vite: {
     build: {
       rollupOptions: {
