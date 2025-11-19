@@ -1,0 +1,11 @@
+/* Inter font weights you actually want */
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+
+/* Tell Starlight to use Inter */
+:root {
+  --sl-font: "Inter", sans-serif;
+  --sl-font-heading: "Inter", sans-serif;
+}
