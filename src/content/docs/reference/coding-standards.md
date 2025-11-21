@@ -13,42 +13,69 @@ Consistent coding standards ensure maintainability, readability, and collaborati
 
 - **Language:** TypeScript  
 - **Framework:** React (Vite)  
-- **Styling:** CSS Modules
+- **Styling:** CSS Modules + Global CSS
 
 ---
 
 ## 2. Naming Conventions
 
-Use clear, consistent, and descriptive names that reflect the actual conventions used in this codebase.
+Use clear and consistent naming that follows our actual codebase patterns.
 
-### File & Folder Naming
+---
+
+## 2.1 File & Folder Naming
 
 | Type | Convention | Example |
 |------|------------|---------|
-| **Component folders** | PascalCase | `GameBoard/` |
-| **Component files** | PascalCase | `GameBoard.tsx` |
+| **Component folders** | PascalCase | `ResultModal/` |
+| **Component files** | PascalCase | `ResultModal.tsx` |
+| **Interfaces (component props)** | `ComponentName.interface.ts` | `ResultModal.interface.ts` |
 | **Hooks** | camelCase, prefixed with `use` | `useGameLogic.ts` |
-| **Interfaces (component-specific)** | `ComponentName.interface.ts` | `GameBoard.interface.ts` |
-| **Utility files** | camelCase | `cellUtils.ts` |
-| **CSS Modules** | PascalCase | `Cell.module.css` |
+| **Utility files** | camelCase | `boardUtils.ts` |
+| **CSS Modules** | PascalCase | `ResultModal.module.css` |
+| **Global CSS files** | kebab-case | `app.css` |
 
-### CSS Class Naming
+---
 
-We follow what the codebase actually uses:  
-➡ **camelCase**, not kebab-case.
+## 2.2 CSS Class Naming
 
-Examples:
+### ✔ All CSS class names use **kebab-case**
+This applies to both:
 
-- `.cell`
-- `.revealed`
-- `.mine`
-- `.exploded`
-- `.flagged`
+- CSS modules  
+- Global CSS  
 
-Correct:
+### ✔ Referencing classes in React components:
+- **CSS module classes** → camelCase (auto-transformed by build tools)
+- **Global CSS classes** → kebab-case (literal class names)
+
+### Examples
+
+#### CSS Module (`ResultModal.module.css`)
 
 ```css
-.cell.revealed { ... }
+.result-modal { ... }
+.result-modal-button { ... }
+.modal-overlay { ... }
+```
+
+#### Component usage
+
+```tsx
+import styles from "./ResultModal.module.css";
+
+<div className={styles.resultModal}>...</div>
+<button className={styles.resultModalButton}>...</button>
+```
+
+#### Global CSS (`app.css`)
+
+```css
+.header-game-title { ... }
+```
+
+```tsx
+<h1 className="header-game-title">Minesweeper</h1>
 ```
 
 ---
@@ -65,11 +92,11 @@ Correct:
 
 ## 4. Linting and Style Rules
 
-- **ESLint** for TypeScript/React best practices  
-- **Stylelint** for CSS Modules  
+- **ESLint** for TypeScript and React  
+- **Stylelint** for CSS Modules & global CSS  
 - **Prettier** for formatting  
 
-Run checks locally:
+Local checks:
 
 ```bash
 npm run lint
@@ -81,21 +108,21 @@ npm run format:check
 
 ## 5. Component Guidelines
 
-- Keep components small, focused, and reusable  
-- Extract logic into custom hooks when appropriate  
+- Keep components small and focused  
+- Extract shared or complex logic into custom hooks  
 - Prefer functional components with Hooks  
-- Avoid deep prop drilling — use context or composed components  
-- Separate UI (presentational) and logic (container) when complexity grows  
+- Avoid deep prop drilling — use context when helpful  
+- Separate UI and logic when components grow complex  
 
 ---
 
 ## 6. TypeScript Practices
 
-- Always type function parameters and return values  
-- Use **interfaces** for component props and public shapes  
-- Use **types** for unions and helpers  
-- Avoid `any` — use `unknown` or proper types  
-- Use `readonly` when working with immutable data  
+- Type all function parameters and return values  
+- Use **interfaces** for component props  
+- Use **types** for unions and utilities  
+- Avoid `any`; use `unknown` or proper types  
+- Use `readonly` where appropriate  
 
 ---
 
@@ -105,15 +132,15 @@ npm run format:check
 
 - `feat:` new feature  
 - `fix:` bug fix  
-- `refactor:` behavior unchanged  
-- `docs:` documentation  
+- `refactor:` internal change  
+- `docs:` documentation updates  
 - `test:` tests  
-- `chore:` tooling / maintenance  
+- `chore:` tooling, configs  
 
 Example:
 
 ```bash
-feat: add timer display to GameBoard
+feat: add animations to result modal
 ```
 
 ### Branch Naming
@@ -125,7 +152,7 @@ feat: add timer display to GameBoard
 Example:
 
 ```bash
-git checkout -b feature/add-timer
+git checkout -b feature/add-result-modal
 ```
 
 ---
@@ -133,9 +160,8 @@ git checkout -b feature/add-timer
 ## 8. Testing
 
 - Use **Vitest** + React Testing Library  
-- Test logic-heavy components and hooks  
 - Focus on behavior, not implementation details  
-- Ensure tests pass before pushing:
+- Test logic-heavy hooks and components  
 
 ```bash
 npm test
@@ -146,15 +172,15 @@ npm test
 ## 9. Documentation & Comments
 
 - Keep code self-explanatory  
-- Comment only when needed for clarity  
-- Use JSDoc for complex functions or interfaces  
-- Update comments when logic changes  
+- Use comments only when needed  
+- Use JSDoc for complex logic  
+- Update comments when behavior changes  
 
 ---
 
 ## 10. Pull Requests
 
-- Ensure lint, format, and tests pass  
+- Ensure lint, formatting, and tests pass  
 - Include screenshots for UI changes  
 - Reference related issues  
-- Keep PRs small and focused  
+- Keep PRs focused and scoped  
