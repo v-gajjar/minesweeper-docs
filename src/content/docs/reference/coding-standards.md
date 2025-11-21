@@ -29,7 +29,7 @@ Use clear, consistent, and descriptive names that reflect the actual conventions
 | **Component files** | PascalCase | `GameBoard.tsx` |
 | **Hooks** | camelCase, prefixed with `use` | `useGameLogic.ts` |
 | **Interfaces (component-specific)** | `ComponentName.interface.ts` | `GameBoard.interface.ts` |
-| **Utility files** | camelCase | `formatTimer.ts` |
+| **Utility files** | camelCase | `cellUtils.ts` |
 | **CSS Modules** | PascalCase | `Cell.module.css` |
 
 ### CSS Class Naming
