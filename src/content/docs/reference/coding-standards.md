@@ -1,6 +1,6 @@
 ---
-title: How to Play
-description: Learn the rules of Minesweeper and how to play the game effectively.
+title: Coding Standards
+description: Coding conventions for the Minesweeper codebase to ensure clarity, consistency, and maintainability.
 ---
 
 # Coding Standards
@@ -11,42 +11,63 @@ Consistent coding standards ensure maintainability, readability, and collaborati
 
 ## 1. Language and Framework
 
-- **Language:** TypeScript
-- **Framework:** React with Vite
+- **Language:** TypeScript  
+- **Framework:** React (Vite)  
 - **Styling:** CSS Modules
 
 ---
 
 ## 2. Naming Conventions
 
-Use clear, consistent, and descriptive names.
+Use clear, consistent, and descriptive names that reflect the actual conventions used in this codebase.
+
+### File & Folder Naming
 
 | Type | Convention | Example |
-|------|-------------|----------|
-| Components | PascalCase | `GameBoard.tsx` |
-| Hooks | camelCase, prefixed with `use` | `useGameLogic.ts` |
-| Interfaces | Prefix with `I` | `IGameState` |
-| CSS Classes | kebab-case | `.cell-revealed` |
-| Files/Folders | kebab-case | `remaining-flags-counter/` |
-| Constants | UPPER_SNAKE_CASE | `MAX_MINES` |
+|------|------------|---------|
+| **Component folders** | PascalCase | `GameBoard/` |
+| **Component files** | PascalCase | `GameBoard.tsx` |
+| **Hooks** | camelCase, prefixed with `use` | `useGameLogic.ts` |
+| **Interfaces (component-specific)** | `ComponentName.interface.ts` | `GameBoard.interface.ts` |
+| **Utility files** | camelCase | `formatTimer.ts` |
+| **CSS Modules** | PascalCase | `Cell.module.css` |
+
+### CSS Class Naming
+
+We follow what the codebase actually uses:  
+➡ **camelCase**, not kebab-case.
+
+Examples:
+
+- `.cell`
+- `.revealed`
+- `.mine`
+- `.exploded`
+- `.flagged`
+
+Correct:
+
+```css
+.cell.revealed { ... }
+```
 
 ---
 
 ## 3. Code Formatting
 
-- Use **Prettier** for consistent formatting.  
-- Run `npm run format` before committing.
+- Use **Prettier** for consistent formatting  
+- Run formatting before committing  
 - Indentation: 2 spaces  
-- Line length: 100 characters (soft limit)
-- End files with a newline
+- Soft line limit: 100 characters  
+- End files with a newline  
 
 ---
 
 ## 4. Linting and Style Rules
 
-- **ESLint** enforces JavaScript/TypeScript best practices.
-- **Stylelint** enforces CSS rules and class naming.
-- **Prettier** ensures consistent formatting across all files.
+- **ESLint** for TypeScript/React best practices  
+- **Stylelint** for CSS Modules  
+- **Prettier** for formatting  
 
 Run checks locally:
 
@@ -56,60 +77,65 @@ npm run lint:css
 npm run format:check
 ```
 
+---
+
 ## 5. Component Guidelines
 
-- Keep components small and focused on a single responsibility.
-- Extract logic into custom hooks when reusable or complex.
-- Prefer functional components and React Hooks.
-- Avoid deep prop drilling; use context or state management when needed.
-- Separate UI (presentational) and logic (container) layers.
+- Keep components small, focused, and reusable  
+- Extract logic into custom hooks when appropriate  
+- Prefer functional components with Hooks  
+- Avoid deep prop drilling — use context or composed components  
+- Separate UI (presentational) and logic (container) when complexity grows  
 
 ---
 
 ## 6. TypeScript Practices
 
-- Always type function parameters and return values.
-- Prefer interfaces for public shapes and types for unions or utility definitions.
-- Avoid any — use unknown or define proper types.
-- Use readonly when appropriate to protect immutable data.
+- Always type function parameters and return values  
+- Use **interfaces** for component props and public shapes  
+- Use **types** for unions and helpers  
+- Avoid `any` — use `unknown` or proper types  
+- Use `readonly` when working with immutable data  
 
 ---
 
-##7. Commits and Branches
+## 7. Commits and Branches
 
-- Follow Conventional Commits:
-	- feat: new feature
-	- fix: bug fix
-	- refactor: code change without behavior change
-	- docs: documentation update
-	- test: adding or updating tests
-	- chore: tooling or maintenance
+### Commit Messages (Conventional Commits)
+
+- `feat:` new feature  
+- `fix:` bug fix  
+- `refactor:` behavior unchanged  
+- `docs:` documentation  
+- `test:` tests  
+- `chore:` tooling / maintenance  
 
 Example:
 
 ```bash
-feat: add timer component to dashboard
+feat: add timer display to GameBoard
 ```
 
-- Branch naming:
-	- feature/<short-description>
-	- fix/<short-description>
-	- docs/<short-description>
+### Branch Naming
+
+- `feature/<short-description>`
+- `fix/<short-description>`
+- `docs/<short-description>`
 
 Example:
 
 ```bash
-git checkout -b feature/timer-component
+git checkout -b feature/add-timer
 ```
 
 ---
 
 ## 8. Testing
 
-- Use Vitest with React Testing Library.
-- Write tests for all logic-heavy components and hooks.
-- Focus on user behavior, not implementation details.
-- Ensure tests run cleanly before pushing:
+- Use **Vitest** + React Testing Library  
+- Test logic-heavy components and hooks  
+- Focus on behavior, not implementation details  
+- Ensure tests pass before pushing:
 
 ```bash
 npm test
@@ -117,17 +143,18 @@ npm test
 
 ---
 
-## 9. Documentation and Comments
+## 9. Documentation & Comments
 
-- Keep code self-explanatory; comment only when necessary.
-- Use JSDoc-style comments for complex functions or interfaces.
-- Update inline documentation when logic changes.
+- Keep code self-explanatory  
+- Comment only when needed for clarity  
+- Use JSDoc for complex functions or interfaces  
+- Update comments when logic changes  
 
 ---
 
 ## 10. Pull Requests
 
-- Ensure all lint, test, and format checks pass.
-- Include screenshots for UI changes.
-- Reference related issues in the PR description.
-- Keep changes small and focused.
+- Ensure lint, format, and tests pass  
+- Include screenshots for UI changes  
+- Reference related issues  
+- Keep PRs small and focused  
