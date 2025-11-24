@@ -5,7 +5,7 @@ description: High-level overview of the Minesweeper architecture and how the maj
 
 ## System Overview
 
-![Architecture Diagram](public/images/ui-flow.png)
+![Architecture Diagram](https://github.com/v-gajjar/minesweeper-docs/blob/feature/221-move-project-documentation-out-of-github-wiki-and-rebuild-astro/public/images/ui-flow.png)
 
 This diagram illustrates the UI that we are working towards building. Currently there is just one "screen" - represented by the App.tsx component.
 
