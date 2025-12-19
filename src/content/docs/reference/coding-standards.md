@@ -11,8 +11,8 @@ Consistent coding standards ensure maintainability, readability, and collaborati
 
 ## 1. Language and Framework
 
-- **Language:** TypeScript  
-- **Framework:** React (Vite)  
+- **Language:** TypeScript
+- **Framework:** React (Vite)
 - **Styling:** CSS Modules + Global CSS
 
 ---
@@ -25,15 +25,25 @@ Use clear and consistent naming that follows our actual codebase patterns.
 
 ## 2.1 File & Folder Naming
 
+### Core rules
+
+- **Component folders and component files:** **PascalCase**
+- **Non-component `.ts` files (utilities, hooks, services, etc.):** **camelCase**
+
+### Conventions
+
 | Type | Convention | Example |
 |------|------------|---------|
 | **Component folders** | PascalCase | `ResultModal/` |
 | **Component files** | PascalCase | `ResultModal.tsx` |
-| **Interfaces (component props)** | `ComponentName.interface.ts` | `ResultModal.interface.ts` |
-| **Hooks** | camelCase, prefixed with `use` | `useGameLogic.ts` |
+| **Component props / interfaces** | Co-located `.interface.ts` or `.interfaces.ts` | `GameBoard.interface.ts` |
+| **Hooks** | camelCase, prefixed with `use` | `useMinesweeperGame.ts` |
 | **Utility files** | camelCase | `boardUtils.ts` |
-| **CSS Modules** | PascalCase | `ResultModal.module.css` |
+| **CSS Modules** | PascalCase + `.module.css` | `ResultModal.module.css` |
 | **Global CSS files** | kebab-case | `app.css` |
+
+Notes:
+- Interface file naming (`.interface.ts` vs `.interfaces.ts`) is not yet standardized. Follow the existing pattern when modifying files.
 
 ---
 
@@ -42,8 +52,8 @@ Use clear and consistent naming that follows our actual codebase patterns.
 ### ✔ All CSS class names use **kebab-case**
 This applies to both:
 
-- CSS modules  
-- Global CSS  
+- CSS modules
+- Global CSS
 
 ### ✔ Referencing classes in React components:
 - **CSS module classes** → camelCase (auto-transformed by build tools)
@@ -82,47 +92,47 @@ import styles from "./ResultModal.module.css";
 
 ## 3. Code Formatting
 
-- Use **Prettier** for consistent formatting  
-- Run formatting before committing  
-- Indentation: 2 spaces  
-- Soft line limit: 100 characters  
-- End files with a newline  
+- Use **Prettier** for consistent formatting
+- Run formatting before committing
+- Indentation: 2 spaces
+- Soft line limit: 100 characters
+- End files with a newline
 
 ---
 
 ## 4. Linting and Style Rules
 
-- **ESLint** for TypeScript and React  
-- **Stylelint** for CSS Modules & global CSS  
-- **Prettier** for formatting  
+- **ESLint** for TypeScript and React
+- **Stylelint** for CSS Modules & global CSS
+- **Prettier** for formatting
 
 Local checks:
 
 ```bash
-npm run lint
-npm run lint:css
-npm run format:check
+pnpm run lint
+pnpm run lint:css
+pnpm run format:check
 ```
 
 ---
 
 ## 5. Component Guidelines
 
-- Keep components small and focused  
-- Extract shared or complex logic into custom hooks  
-- Prefer functional components with Hooks  
-- Avoid deep prop drilling — use context when helpful  
-- Separate UI and logic when components grow complex  
+- Keep components small and focused
+- Extract shared or complex logic into custom hooks
+- Prefer functional components with Hooks
+- Avoid deep prop drilling — use context when helpful
+- Separate UI and logic when components grow complex
 
 ---
 
 ## 6. TypeScript Practices
 
-- Type all function parameters and return values  
-- Use **interfaces** for component props  
-- Use **types** for unions and utilities  
-- Avoid `any`; use `unknown` or proper types  
-- Use `readonly` where appropriate  
+- Type all function parameters and return values
+- Use **interfaces** for component props
+- Use **types** for unions and utilities
+- Avoid `any`; use `unknown` or proper types
+- Use `readonly` where appropriate
 
 ---
 
@@ -130,12 +140,12 @@ npm run format:check
 
 ### Commit Messages (Conventional Commits)
 
-- `feat:` new feature  
-- `fix:` bug fix  
-- `refactor:` internal change  
-- `docs:` documentation updates  
-- `test:` tests  
-- `chore:` tooling, configs  
+- `feat:` new feature
+- `fix:` bug fix
+- `refactor:` internal change
+- `docs:` documentation updates
+- `test:` tests
+- `chore:` tooling, configs
 
 Example:
 
@@ -159,28 +169,28 @@ git checkout -b feature/add-result-modal
 
 ## 8. Testing
 
-- Use **Vitest** + React Testing Library  
-- Focus on behavior, not implementation details  
-- Test logic-heavy hooks and components  
+- Use **Vitest** + React Testing Library
+- Focus on behavior, not implementation details
+- Test logic-heavy hooks and components
 
 ```bash
-npm test
+pnpm test
 ```
 
 ---
 
 ## 9. Documentation & Comments
 
-- Keep code self-explanatory  
-- Use comments only when needed  
-- Use JSDoc for complex logic  
-- Update comments when behavior changes  
+- Keep code self-explanatory
+- Use comments only when needed
+- Use JSDoc for complex logic
+- Update comments when behavior changes
 
 ---
 
 ## 10. Pull Requests
 
-- Ensure lint, formatting, and tests pass  
-- Include screenshots for UI changes  
-- Reference related issues  
-- Keep PRs focused and scoped  
+- Ensure lint, formatting, and tests pass
+- Include screenshots for UI changes
+- Reference related issues
+- Keep PRs focused and scoped
