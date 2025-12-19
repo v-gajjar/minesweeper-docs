@@ -13,9 +13,9 @@ This docs site includes:
 
 - **Guides** (Game Rules, Developer Setup, Contribution Flow)
 - **Reference Material** (Architecture, File Map, Testing Guide, Coding Standards)
-- **Project conventions** (Issue Labels, UX notes, design-related docs)
+- **Project conventions** (Issue Labels, UX notes, future design docs)
 - A rich landing page (`index.mdx`)
-- Auto-generated sidebar, dark mode, and search
+- Auto-generated sidebar + dark mode + search
 
 All documentation pages live inside:
 
@@ -31,8 +31,8 @@ src/content/docs/
 src/
   content/
     docs/
-      guides/      → How-to guides & walkthroughs
-      reference/   → Technical reference & standards
+      guides/      → Tutorials & walkthroughs
+      reference/   → Technical documentation & standards
       index.mdx    → Homepage for the docs site
 public/
 astro.config.mjs
@@ -46,14 +46,14 @@ This organization helps contributors quickly find where a new page should go.
 
 All commands run from the project root:
 
-| Command                    | Action                                     |
-| :------------------------- | :----------------------------------------- |
-| `pnpm install`             | Install dependencies                       |
-| `pnpm run dev`             | Start local dev server at `localhost:4321` |
-| `pnpm run build`           | Build production site into `./dist/`       |
-| `pnpm run preview`         | Preview the production build locally       |
-| `pnpm run astro ...`       | Run Astro CLI commands                     |
-| `pnpm run astro -- --help` | Show full Astro CLI help                   |
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `pnmp install`             | Install dependencies                             |
+| `pnmp run dev`             | Start local dev server at `localhost:4321`       |
+| `pnmp run build`           | Build production site into `./dist/`             |
+| `pnmp run preview`         | Preview the production build locally             |
+| `pnmp run astro ...`       | Run Astro CLI commands (`astro add`, etc.)       |
+| `pnmp run astro -- --help` | Show full Astro CLI help                          |
 
 ---
 
@@ -66,7 +66,7 @@ Your hosting provider (Vercel, GitHub Pages, or Netlify) will:
 - Run the production build  
 - Deploy the updated site  
 
-If a specific deployment provider is used, document it here.
+If needed, add your specific deployment target here.
 
 ---
 
